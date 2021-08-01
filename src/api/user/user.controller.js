@@ -20,7 +20,8 @@ exports.getUser = async (req, res) => {
     if (!user) {
       return res.status(200).json(`No user found with username ${username}`);
     }
-    return res.status(200).json(user);
+    const { username, created_at } = user;
+    return res.status(200).json({ username, created_at });
   } catch (err) {
     return res.status(500).json(`Internal Server Error: ${err}`);
   }

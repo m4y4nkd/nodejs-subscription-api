@@ -1,0 +1,2 @@
+SELECT *
+FROM PLANS P WHERE plan_id = ?;
